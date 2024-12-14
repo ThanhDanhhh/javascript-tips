@@ -3,7 +3,7 @@
 
 <!---- logo ----->
 <div align="center">
-<img src="images/logo.png" alt="logo" height="200" width="450"/>
+<img src="./images/logo.JPG" height="200" width="450"/>
 </div>
 
 <!----- Tips for Array ----->
