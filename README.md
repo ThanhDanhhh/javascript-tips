@@ -7,26 +7,31 @@
 </div>
 
 <!----- Tips for Array ----->
-#Array 
+# Array 
 <details open="open">
   <summary>
     1. Generate an Array
   </summary>
 - Create an empty array of length **`n`**
+  
   ```js
   var arr = new Array(3);
+
   // result: arr = [undefined, undefined, undefined]
   ```
 - Create an empty array of length **`n`** & fill value **`x`**
+  
   ```js
   var arr = [...Array(3).fill(1)];
   var arr2 = [...Array(5).fill(1, 0, 3)];
+  
   /* 
     result: arr = [1, 1, 1]
             arr2 = [1, 1, 1, undefined, undefined]
   */
   ```
 - Create an array containing `0...n`
+  
   ```js
   var arr = [...Array.keys(5)];
   // result: arr = [0, 1, 2, 3, 4]
@@ -47,6 +52,9 @@
   <summary>
     2. Extract Unique Values of Array
   </summary>
+  
+  <br />
+  
 ```js
 var arr = [1, 2, 2, 3, 5, 5, 4];
 var newArr = [...new Set(arr)];
@@ -57,6 +65,7 @@ var newArr = [...new Set(arr)];
   <summary>
     3. Shuffle Elements from Array
   </summary>
+  
 ```js
 var arr = [1, 2, 3, 4, 5];
 var newArr = arr.sort(() => Math.random() - 0.5);
@@ -67,6 +76,7 @@ var newArr = arr.sort(() => Math.random() - 0.5);
   <summary>
     4. Flatten a Multidimensional Array
   </summary>
+  
 ```js
 var arr = [1, [2, 3], [4, 5, 6], 7];
 var newArr = [].concat(...arr);
@@ -77,6 +87,7 @@ var newArr = [].concat(...arr);
   <summary>
     5. Resize an Array
   </summary>
+  
 ```js
 var arr = [1, 2, 3, 4, 5];
 arr.length = 2;
