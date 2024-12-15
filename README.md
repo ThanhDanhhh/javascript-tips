@@ -1,10 +1,36 @@
-# javascript-tips
 <h1 align="center"> JavaScript tips & tricks</h1>
 
 <!---- logo ----->
 <div align="center">
 <img src="./images/logo.JPG" height="200" width="450"/>
 </div>
+
+# Description 😋
+> This is a collection of JavaScript tips and tricks. you can refer to it and apply it to make your code more concise. **But don't overdo it**, it can make your code difficult to read and maintain. Hope everyone contributes, thanks.
+
+<!-- table of content -->
+
+# TABLE OF CONTENT
+# Table Of Content 📃
+
+- [Array](#array-1)
+- [Object](#object-1)
+- [Operator](#operator-1)
+- [Compairsion](#compairsion-1)
+- [Function](#function-1)
+- [Math](#math-1)
+- [Others](#others-1)
+- [Description](#description)
+- [Table Of Content](#table-of-content)
+- [Array](#array)
+- [Object](#object)
+- [Destructuring](#destructuring)
+- [Operator](#operator)
+- [Compairsion](#compairsion)
+- [Function](#function)
+- [Math](#math)
+- [Others](#others)
+
 
 <!----- Tips for Array ----->
 # Array 
@@ -65,6 +91,8 @@ var newArr = [...new Set(arr)];
   <summary>
     3. Shuffle Elements from Array
   </summary>
+
+  <br />
   
 ```js
 var arr = [1, 2, 3, 4, 5];
@@ -76,6 +104,8 @@ var newArr = arr.sort(() => Math.random() - 0.5);
   <summary>
     4. Flatten a Multidimensional Array
   </summary>
+
+  <br />
   
 ```js
 var arr = [1, [2, 3], [4, 5, 6], 7];
@@ -87,6 +117,8 @@ var newArr = [].concat(...arr);
   <summary>
     5. Resize an Array
   </summary>
+
+  <br />
   
 ```js
 var arr = [1, 2, 3, 4, 5];
@@ -99,3 +131,22 @@ arr2.length = 0;
 */
 ```
 </details>
+
+<br/>
+
+# Operator
+# Destructuring
+
+<br/>
+# Operator
+
+# Compairsion
+
+<br/>
+# Function
+
+<br/>
+# Math
+
+<br/>
+# Others
