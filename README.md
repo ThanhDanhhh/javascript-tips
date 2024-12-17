@@ -139,38 +139,53 @@ arr3.length = 7;
 </details>
 
 <br />
+
 <details open="open">
   <summary>
     2. Clone an Object
   </summary>
+
 - Shallow copy `(Not Recommended)`
+  
   > Use the `=` operator to copy object 1 into object 2. These 2 objects point to the same memory area `(reference)`. Therefore, if we change object 1, object 2 will also change.
+  
   ```js
   var obj1 = { a: 1, b: 2 };
   var obj2 = obj1; // obj2 = { a: 1, b: 2 }
+  
   obj1.a = 3; // change value of a property
+  
   console.log(obj1); // { a: 3, b: 2 }
   console.log(obj2); // { a: 3, b: 2 } => property a of obj2 changed 🙂❗
   console.log(obj3); // { a: 3, b: 2 } => property a of obj2 changed 🙂❗
   ```
+
 - Deep copy
+  
   > **Way 1**: Use Spread operator `{...}` or `Object.assign()` to fix "Shallow copy". **_Issue:_** `Nested objects` still have shallow copy problem.
+  
   ```js
   var obj1 = { a: 1, b: 2, c: { nested: 3 } };
   var obj2 = { ...obj1 }; // obj2 = { a: 1, b: 2, c: { nested: 3 } }
   var obj3 = Object.assign({}, obj1); // obj3 = { a: 1, b: 2, c: { nested: 3 } }
+  
   obj1.a = 3;
   obj1.c.nested = 4;
+  
   console.log(obj1); // { a: 1, b: 3, c: { nested: 4 } }
   console.log(obj2); // { a: 1, b: 2, c: { nested: 4 } } 🙂
   console.log(obj3); // { a: 1, b: 2, c: { nested: 4 } } 🙂
   ```
+  
   > **Way 2 `(Recommended)`**: Use `JSON.stringify()` & `JSON.parse()` to solve the above problems
+  
   ```js
   var obj1 = { a: 1, b: 2, c: { nested: 3 } };
   var obj2 = JSON.parse(JSON.stringify(obj1)); // obj2 = { a: 1, b: 2, c: { nested: 4 } }
+  
   obj1.a = 3;
   obj1.c.nested = 4;
+  
   console.log(obj1); // { a: 1, b: 3, c: { nested: 4 } }
   console.log(obj2); // { a: 1, b: 2, c: { nested: 3 } } 😉😘
   ```
